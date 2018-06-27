@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
         name: 'Kanban Board',
         addColumn: function (column) {
             this.element.appendChild(column.element);
-            initSortable(column.id); //About this feature we will tell later
+            initSortable(column.id);
         },
         element: document.querySelector('#board .column-container')
     };
@@ -108,12 +108,12 @@ document.addEventListener('DOMContentLoaded', function () {
     board.addColumn(doingColumn);
     board.addColumn(doneColumn);
 
-    // CREATING CARDS
-    var card1 = new Card('New task');
-    var card2 = new Card('Create kanban boards');
+    var card1 = new Card('JavaScript');
+    var card2 = new Card('Style Css');
+    var card3 = new Card('HTML Skeleton');
 
     // ADDING CARDS TO COLUMNS
     todoColumn.addCard(card1);
     doingColumn.addCard(card2);
-
+    doneColumn.addCard(card3);
 });
